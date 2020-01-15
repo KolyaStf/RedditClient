@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Reddit Client</string>
+
+    <string name="check_internet_connection">Check your internet connection.</string>
+    <string name="top_posts">Top Posts</string>
+    <string name="author_date_template">Posted by %s %s</string>
+    <string name="comments_count_template">%d Comments</string>
+
+</resources>

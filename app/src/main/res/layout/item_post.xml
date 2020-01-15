@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/medium"
+    android:layout_marginEnd="@dimen/medium"
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/small">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_post_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/medium">
+
+            <LinearLayout
+                android:id="@+id/item_post_sat_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/item_post_subreddit_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/small"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/small"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="androiddev" />
+
+                <TextView
+                    android:id="@+id/item_post_author_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:paddingBottom="@dimen/small"
+                    android:textSize="11sp"
+                    tools:text="posted by ogkkkkkkkkkkre 1 hour ago" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_post_tt_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_post_sat_container">
+
+                <TextView
+                    android:id="@+id/item_post_title_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/big"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    tools:text="Some post" />
+
+                <ImageView
+                    android:id="@+id/item_post_thumbnail_iv"
+                    android:layout_width="@dimen/thumbnail_size"
+                    android:layout_height="@dimen/thumbnail_size"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_thumbnail"
+                    tools:src="@drawable/ic_reddit_seeklogo" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/item_post_comment_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_comment"
+                app:layout_constraintEnd_toStartOf="@+id/item_post_comment_count_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/item_post_comment_count_tv" />
+
+            <TextView
+                android:id="@+id/item_post_comment_count_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium"
+                android:layout_marginTop="@dimen/medium"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_post_rating_tv"
+                app:layout_constraintStart_toEndOf="@+id/item_post_comment_iv"
+                app:layout_constraintTop_toBottomOf="@+id/item_post_tt_container"
+                tools:text="333 comments" />
+
+            <TextView
+                android:id="@+id/item_post_rating_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:layout_marginEnd="@dimen/medium"
+                android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_post_star_iv"
+                app:layout_constraintStart_toEndOf="@+id/item_post_comment_count_tv"
+                app:layout_constraintTop_toBottomOf="@+id/item_post_tt_container"
+                tools:text="123" />
+
+            <ImageView
+                android:id="@+id/item_post_star_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:src="@drawable/ic_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_post_rating_tv"
+                app:layout_constraintTop_toBottomOf="@+id/item_post_tt_container" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
